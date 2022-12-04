@@ -9,6 +9,9 @@ body {
   line-height: 1.5;
 }
 
+
+
+
 h1,
 h2,
 h3,
@@ -56,4 +59,17 @@ main {
     ;    
   }
 }
-*/
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
