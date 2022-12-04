@@ -73,3 +73,18 @@ nav div {
   flex-direction: row;
   justify-content: flex-end;
 }
+
+/* BANNER */
+
+.banner {
+  text-align: right;
+  height: 300px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("../images/rice.jpg");
+  background-size: cover;
+  background-position: center;  
+}
+
+.banner h2 {
+}
