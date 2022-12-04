@@ -1,5 +1,15 @@
+/*INDEX
+i) ROOT, universal and body
+ii) NAVAIGATION bar
+iii) BANNER
+iv) CONTENT GRIDS
+v) MEDIA QUERIES
+*/
+
+/* VARIABLES */
 :root {
   --bg-color: grey;
+  --contrast-color: yellow;
 
   --banner-img: url("../images/steve.jpg");
   --about-img: url("../images/rice.jpg");
@@ -14,11 +24,36 @@
 
 body {
   background-color: var(--bg-color);
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  scroll-behavior: smooth;
+}
+
+nav div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/* BANNER */
+.banner {
+  background-image: var(--banner-img);
+  background-size: cover;
+  background-position: center;
+  color: var(--contrast-color);
+  height: 600px;
+  width: 100%;
+  margin-bottom: 25px;
+  text-align: right;
+}
+
 
 /* MAIN CONTANER */
 main {
@@ -31,15 +66,14 @@ main {
     "work work-detail"
     "contact contact-detail";
   ;
-}
+} 
 
 #about-detail {
-  color: red;
   background-image: var(--about-img);
   background-size: cover;
 }
 
-  /* CODE SUBCONTAINER */
+  /* CODE SUBCONTAINER - work-detail*/
   .subcontainer {
     display: grid;
     gap: 0.5em;
@@ -56,6 +90,11 @@ main {
     background-size: cover;
     color: red
   }
+
+  .subcontainer p {
+    color: var(--contrast-color);
+  }
+
   #code1 {
     grid-area: sub1;
   }
@@ -76,43 +115,27 @@ main {
     grid-area: sub5;
   }
 
+  /* MEDIA QUERIES */
 @media only screen and (max-width: 660px) {
   .subcontainer {
-    grid-template-columns: 0.5fr;
-    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr ;
     grid-template-areas:
       "sub1"
       "sub2"
       "sub3"
-      "sub4";
-    ;    
+      "sub4"
+      "sub5";
   }
 }
 
-/* NAVIGATION */
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  scroll-behavior: smooth;
-}
-
-nav div {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-/* BANNER */
-.banner {
-  text-align: right;
-  height: 600px;
-  width: 100%;
-  margin-bottom: 25px;
-  background-image: var(--banner-img);
-  background-size: cover;
-  background-position: center;  
-}
-
-.banner h2 {
+@media only screen and (min-width:661px max-width: 990px) {
+  .subcontainer {
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.33fr 0.33fr 0.33fr;
+    grid-template-areas:
+      "sub1 sub1"
+      "sub2 sub3"
+      "sub4 sub5";
+  }
 }
