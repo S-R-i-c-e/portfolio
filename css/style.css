@@ -25,6 +25,7 @@ p {
   margin: 0;
 }
 
+/* MAIN CONTANER AND SUBCONTAINER */
 main {
   display: grid;
   grid-template-columns: 0.25fr 0.75fr;
@@ -36,16 +37,36 @@ main {
   ;
 }
 
-.subcontainer {
-  display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
-  grid-template-rows: 0.5fr 0.5fr;
-  grid-template-areas:
-    "sub1 sub2"
-    "sub3 sub4";
-  ;
-}
+  /* CODE SUBCONTAINER */
+  .subcontainer {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.25fr 0.25fr;
+    grid-template-areas:
+      "sub1 sub1"
+      "sub2 sub3"
+      "sub4 sub5";
+  }
 
+  #code1 {
+    grid-area: sub1;
+  }
+
+  #code2 {
+    grid-area: sub2;
+  }
+
+  #code3 {
+    grid-area: sub3;
+  }
+
+  #code4 {
+    grid-area: sub4;
+  }
+
+  #code5 {
+    grid-area: sub5;
+  }
 
 @media only screen and (max-width: 660px) {
   .subcontainer {
@@ -61,7 +82,6 @@ main {
 }
 
 /* NAVIGATION */
-
 nav {
   display: flex;
   flex-direction: row;
@@ -75,7 +95,6 @@ nav div {
 }
 
 /* BANNER */
-
 .banner {
   text-align: right;
   height: 300px;
