@@ -1,4 +1,5 @@
 body {
+    /* TODO resume not displaying correctly - should be an image */
     background-image: url("../images/resume.png");
     background-position: center;
     background-size: cover;
