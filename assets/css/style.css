@@ -19,22 +19,10 @@ body {
   line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
 /* MAIN CONTANER */
 main {
   display: grid;
+  gap: 0.5em;
   grid-template-columns: 0.25fr 0.75fr;
   grid-template-rows: 0.4fr 0.4fr 0.2fr;
   grid-template-areas:
@@ -105,6 +93,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  scroll-behavior: smooth;
 }
 
 nav div {
@@ -116,7 +105,7 @@ nav div {
 /* BANNER */
 .banner {
   text-align: right;
-  height: 300px;
+  height: 600px;
   width: 100%;
   margin-bottom: 25px;
   background-image: url("../images/rice.jpg");
