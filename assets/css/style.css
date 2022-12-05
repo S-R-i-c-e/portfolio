@@ -8,9 +8,15 @@ v) MEDIA QUERIES
 
 /* VARIABLES */
 :root {
+  /* colors */
   --bg-color: grey;
   --contrast-color: yellow;
 
+  /* fonts */
+  --primary-font: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --secondary-font: Abel, 'Courier New', Courier, monospace;
+
+  /* images */
   --banner-img: url("../images/steve.jpg");
   --about-img: url("../images/rice.jpg");
   --code-img: url("../images/02-portfolio-1.jpg");
@@ -24,7 +30,7 @@ v) MEDIA QUERIES
 
 body {
   background-color: var(--bg-color);
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--primary-font);
   line-height: 1.5;
 }
 
@@ -93,6 +99,7 @@ main {
 
   .subcontainer p {
     color: var(--contrast-color);
+    font-family: var(--secondary-font);
   }
 
   #code1 {
